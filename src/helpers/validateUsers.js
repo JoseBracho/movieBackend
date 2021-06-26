@@ -1,9 +1,18 @@
 const User = require("../models/user.models");
 
-const nameValidator = async (name = "") => {
+const nameValidator = (name = "") => {
     const phrase = new RegExp(/^[\w'\-,.][^0-9_!¡?÷?¿/\\+=@#$%ˆ&*(){}|~<>;:[\]]{2,}$/);
     const validating = phrase.test(name);
     if(!validating){
+        throw new Error("Invalid name");
+    }else{
+        return true;
+    }
+}
+const nameUpdate = async (name = "") => {
+    const phrase = new RegExp(/^[\w'\-,.][^0-9_!¡?÷?¿/\\+=@#$%ˆ&*(){}|~<>;:[\]]{2,}$/);
+    const validating = phrase.test(name);
+    if(!validating && name != ""){
         throw new Error("Invalid name");
     }else{
         return true;
@@ -22,7 +31,7 @@ const userNameValidator = async (userName = "") => {
     return true;
 }
 
-const passwordValidator = async (password = "") => {
+const passwordValidator = (password = "") => {
     const phrase = new RegExp(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&]{6,}/);
     const validating = phrase.test(password);
     if(!validating){
@@ -33,6 +42,7 @@ const passwordValidator = async (password = "") => {
 }
 module.exports = {
     nameValidator,
+    nameUpdate,
     userNameValidator,
     passwordValidator
 }
