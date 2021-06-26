@@ -28,6 +28,7 @@ class Serve{
     routes(){
         this.app.use('/', express.static('public'))
         this.app.use('/auth', require("./routes/auth.routes")); 
+        this.app.use('/profile', require("./routes/profile.routes")); 
     }
 }
 module.exports = Serve;

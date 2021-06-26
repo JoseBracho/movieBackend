@@ -15,7 +15,16 @@ const userModel = new Schema({
     password:{
         type:String,
         required: true
-    }
+    },
+    age:{
+        type: String
+    },
+    email:{
+        type: String
+    },
+    hobby:{
+        type: String
+    },
 })
 
 userModel.methods.toJSON = function(){
