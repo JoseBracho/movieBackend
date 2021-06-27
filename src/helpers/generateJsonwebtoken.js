@@ -14,4 +14,4 @@ const generateJsonwebtoken = (id) => {
         });
     })
 }
-module.exports = generateJsonwebtoken
+module.exports = generateJsonwebtoke
