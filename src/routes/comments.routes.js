@@ -6,7 +6,7 @@ const {
     createComments, 
     readComments, 
     updateComments,
-    deleteComments} = require("../controllers/movie.controllers");
+    deleteComments} = require("../controllers/comments.controllers");
 const validateToken = require("../middlewares/validateToken");
 
 route.post("/comment/new", validateToken, createComments);

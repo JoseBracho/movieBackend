@@ -29,7 +29,7 @@ class Serve{
         this.app.use('/', express.static('public'))
         this.app.use('/auth', require("./routes/auth.routes")); 
         this.app.use('/profile', require("./routes/profile.routes")); 
-        this.app.use('/movie', require("./routes/movie.routes")); 
+        this.app.use('/movie', require("./routes/comments.routes")); 
     }
 }
 module.exports = Serve;
