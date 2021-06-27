@@ -3,6 +3,10 @@ const mongoose = require("mongoose");
 const {Schema, model} = mongoose
 
 const commentsSchema = new Schema({
+    movieID:{
+        type: String,
+        required: true
+    },
     comment: {
         type: String,
         required: true
