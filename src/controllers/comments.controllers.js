@@ -1,7 +1,6 @@
 
-const createComments = (req, res) => {
+const createComments = async (req, res) => {
     const id = req.id
-    res.send(id)
 }
 
 const readComments = (req, res) => {
