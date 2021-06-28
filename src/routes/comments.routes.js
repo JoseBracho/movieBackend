@@ -11,7 +11,7 @@ const validateToken = require("../middlewares/validateToken");
 
 route.post("/comment/new", validateToken, createComments);
 route.get("/comment/list", validateToken, readComments);
-route.put("/comment/update", validateToken, updateComments);
+route.get("/comment/update", validateToken, updateComments);
 route.delete("/comment/delete", validateToken, deleteComments);
 
 module.exports = route;
