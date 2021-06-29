@@ -1,6 +1,6 @@
 const axios = require("axios");
 
-const search = (title) => {
+const search = async (title) => {
   if (!title) {
     return {
       done: false,
@@ -53,7 +53,7 @@ const movies = async (search = "action") => {
   }
 };
 
-const descriptionMovie = (idMovie) => {
+const descriptionMovie = async (idMovie) => {
   const instance = axios.create({
     baseURL: "http://www.omdbapi.com/",
     timeout: 1000,
