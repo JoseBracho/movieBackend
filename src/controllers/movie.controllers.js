@@ -1,7 +1,8 @@
 const { movies, search, descriptionMovie } = require("../helpers/apiMOD")
 
 const show = async (req, res) => {
-    const showMovie = await movies();
+    const type = req.query.type
+    const showMovie = await movies(type);
     res.json(showMovie)
 }
 

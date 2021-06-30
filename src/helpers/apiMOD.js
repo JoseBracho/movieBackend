@@ -24,7 +24,7 @@ const search = async (title) => {
   } catch (err) {
     return {
       done: false,
-      msg: "Problems with the petition",
+      err,
     };
   }
 };
@@ -48,7 +48,7 @@ const movies = async (search = "action") => {
   } catch (err) {
     return {
       done: false,
-      msg: "Problems with the petition",
+      err,
     };
   }
 };
@@ -72,7 +72,7 @@ const descriptionMovie = async (idMovie) => {
   } catch (err) {
     return {
       done: false,
-      msg: "Problems with the petition",
+      err,
     };
   }
 };

@@ -6,10 +6,9 @@ const {
     show,
     searchMovie,
     description } = require("../controllers/movie.controllers");
-const validateToken = require("../middlewares/validateToken");
 
-route.get("/show", validateToken, show)
-route.get("/search", validateToken, searchMovie)
-route.get("/movieID", validateToken, description)
+route.get("/show", show)
+route.get("/search", searchMovie)
+route.get("/movieID", description)
 
 module.exports = route;
